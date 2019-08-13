@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Appareil_photo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="F8x-YD-Uxc">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Appuyez sur la camera pour prendre une photo" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cjp-xo-fMM">
+                                <rect key="frame" x="20" y="408" width="374" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="UWS-W5-AsV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="22"/>
+                                <color key="textColor" red="1" green="0.26907231300000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HQE-xP-yc3">
+                                <rect key="frame" x="344" y="832" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="7nt-0f-Ehl"/>
+                                    <constraint firstAttribute="height" constant="50" id="edz-l7-B7H"/>
+                                </constraints>
+                                <state key="normal" image="camera"/>
+                                <connections>
+                                    <action selector="prendrePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="52h-Jk-tWd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="cjp-xo-fMM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="DTV-6h-sR1"/>
+                            <constraint firstAttribute="bottom" secondItem="F8x-YD-Uxc" secondAttribute="bottom" id="DjS-zJ-9K4"/>
+                            <constraint firstItem="F8x-YD-Uxc" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Inz-mu-87D"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cjp-xo-fMM" secondAttribute="trailing" constant="20" id="V3I-gu-Pcc"/>
+                            <constraint firstItem="F8x-YD-Uxc" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="WER-AE-TBV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HQE-xP-yc3" secondAttribute="trailing" constant="20" id="go6-hL-Mhm"/>
+                            <constraint firstItem="cjp-xo-fMM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="me7-df-sXb"/>
+                            <constraint firstItem="F8x-YD-Uxc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wZt-hI-fjo"/>
+                            <constraint firstItem="HQE-xP-yc3" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="20" id="zQG-cC-5De"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageViewChoisie" destination="F8x-YD-Uxc" id="hUf-Yj-1rU"/>
+                        <outlet property="noImageLable" destination="cjp-xo-fMM" id="XLR-Vc-R4u"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-57.971014492753625" y="115.84821428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="camera" width="490" height="490"/>
+    </resources>
+</document>
